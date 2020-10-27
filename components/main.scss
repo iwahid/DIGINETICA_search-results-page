@@ -1,3 +1,21 @@
+/* Нормалайз, переменные для этого проекта и стартовый набор стилей
+
+Стартовые стили зависят от проекта и являются частью основы дизайна. На готовом сайте (при внесении правок или доработок) стили этой группы, как правило, уже реализованы в проекте. Компоненты не опираются на эти стили. Эта группа не является зависимостью */
 @import "./../base/normalize";
 @import "./../base/variables";
 @import "./../base/base-style";
+
+/* header страницы */
+@import "./../components/blocks/header/header";
+
+/* Тело страницы. Весь контент внутри неё */
+@import "./../components/sections/search-section/search-section"; 
+
+/* Поисковый блок */
+@import "./../components/blocks/search-bar/search-bar";
+
+/* Общий блок с результатами поиска */
+@import "./../components/blocks/search-results/search-results"; 
+
+/* Блок с перечнем категорий, в которых были найдены товары */
+@import "./../components/sections/categories-section/categories-section"; 

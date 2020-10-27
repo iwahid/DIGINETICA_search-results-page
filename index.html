@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Главная</title>
+  <title>Результаты поиска</title>
 
   <link rel="stylesheet" href="css-output/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
@@ -14,49 +14,84 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <!-- здесь шапка сайта -->
-      <p class="header__text">Шапка сайта</p>
-    </div>
+    <!-- здесь шапка сайта -->
+    <p class="header__text">Шапка сайта</p>
   </header>
 
   <!-- TODO: сделать все кнопки готовыми элементами для всей страницы -->
   <section class="search">
     <div class="container">
+      <!-- NOTE: ниже пример часто встречающейся структуры в проекте, когда в разметке страницы в пределах одного Блока объявлены элементы этого блока, используемые как контейнеры. Т.е. они не представляют собой целостный элемент, а лишь контейнер для другого Блока. Такая структура помогает разграничить зоны ответственности между компонентами, когда контейнер отвечает за позиционирование и отступы, а его дочерний компонент Блок представляет собой уже целостный компонент. -->
+      <!-- определяю место в родителе под дочерний компонент -->
       <div class="search__bar">
+        <!-- а внутри уже отдельный, самостоятельный дочерний компонент со своей структурой -->
         <div class="search-bar">
           <form class="search-bar__form">
             <input type="text" placeholder="Запрос пользователя" class="search-bar__input">
             <!-- TODO: в стилях через падинг сделать отступ и вклеить иконку -->
             <button class="search-bar__search-button" type="submit">Найти</button>
           </form>
+
           <button type="button" class="search-bar__close-button">Закрыть</button>
         </div>
       </div>
-      <!-- определяю место в родителе под дочерний компонент -->
+
       <div class="search__results">
-        <!-- отдельный, самостоятельный дочерний компонент со своей структурой -->
         <div class="search-results">
           <div class="search-results__top">
             <div class="search-results__query">
               <p class="title">Результаты по запросу</p>
               <p class="query">Показаны результаты для <span class="correct-query">“Запрос пользозвателя”</span>. Вы
-                искали <span class="incorrect-query">“Зопрос пользователя”</span>.</p>
+                искали <span class="incorrect-query">“<span class="incorrect-query__error">Зопрос</span>
+                  пользователя”</span>.</p>
+            </div>
+          </div>
+
+          <!-- нет уверенности в том, что здесь нужен section, а не div -->
+          <section class="search-results__categories">
+            <!-- NOTE: перехожу от БЭМ-а к простой нотации, потому что стили будут описаны в препроцессоре через вложенность. Это позволит избежать большого количества элементов с длинными именами классов -->
+            <div class="category">
+              <ul class="category__list">
+                <li class="category__item">
+                  <img src="" ><!-- alt="alt image description" -->
+                  <div class="category__description">
+                    <span class="category__title">Название категории</span>
+                    <span class="category__counter">134 товара</span>
+                  </div>
+                </li>
+                <li class="category__item">
+                  <img src="" ><!-- alt="alt image description" -->
+                  <div class="category__description">
+                    <span class="category__title">Название категории</span>
+                    <span class="category__counter">134 товара</span>
+                  </div>
+                </li>
+                <li class="category__item">
+                  <img src="" ><!-- alt="alt image description" -->
+                  <div class="category__description">
+                    <span class="category__title">Название категории</span>
+                    <span class="category__counter">134 товара</span>
+                  </div>
+                </li>
+                <li class="category__item">
+                  <img src="" ><!-- alt="alt image description" -->
+                  <div class="category__description">
+                    <span class="category__title">Название категории</span>
+                    <span class="category__counter">134 товара</span>
+                  </div>
+                </li>
+                <li class="category__item">
+                  <img src="" ><!-- alt="alt image description" -->
+                  <div class="category__description">
+                    <span class="category__title">Название категории</span>
+                    <span class="category__counter">134 товара</span>
+                  </div>
+                </li>
+              
+              </ul>
             </div>
 
-            <!-- исходя из макета, предположил что  -->
-            <section class="search-results__top-categories">
-              <!-- NOTE: перехожу от БЭМ-а к простой нотации, потому что стили будут описаны в препроцессоре через вложенность. Это позволит избежать большого количества элементов с длинными именами классов -->
-              <div class="category">
-                <img src="" alt="category-description">
-                <div class="category__description">
-                  <span class="category__title">Название категории</span>
-                  <span>134 товара</span>
-                </div>
-              </div>
-            </section>
-
-          </div>
+          </section>
 
           <div class="search-results__body">
             <aside class="search-results__aside">
@@ -84,13 +119,51 @@
                 <div class="search-filters__brands">
                   <p class="title">Бренды</p>
                   <ul class="list">
-                    <li class="item"><!-- FIXME: чекбоксы (форма?)--><span>(ххх)</span></li>
+                    <li class="item">
+                      <!-- FIXME: чекбоксы (форма?)--><span>(ххх)</span></li>
                   </ul>
                 </div>
               </div>
             </aside>
             <section class="search-results__list">
               <!-- лист с результатами поиска -->
+
+              <div class="results-list">
+                <div class="results-list__header">
+                  <div class="sorts">
+                    <ul class="sorts-by-characteristics"></ul>
+                    <div>
+                      <!-- FIXME: вывод по количеству единиц -->
+                    </div>
+                  </div>
+                  <div class="clarification">
+                    <span>Уточнение</span>
+                  </div>
+                </div>
+
+                <ul class="results-list__body">
+                  <li>
+                    <div class="product-item">
+                      <img class="product-item__img" src="#" alt="some description">
+                      <p class="product-item__title"></p>
+                      <div class="product-item__price">
+                        <span class="new-price">XX XXX , </span>
+                        <span class="old-price">XX XXX , </span>
+                      </div>
+                      <!-- FIXME: контейнер под кнопку -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!--  <svg>
+                        <use href="img/products-cards/product-card-icons-sprite.svg#product-card-icons-sprite__cart">
+                        </use>
+                      </svg>
+                     -->
+
+
+
             </section>
           </div>
         </div>

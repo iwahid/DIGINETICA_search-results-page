@@ -1,0 +1,87 @@
+.search-results {
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__query {
+    display: flex;
+    align-items: center;    
+    margin-bottom: 3rem;
+
+    .title {
+      font-family: Arial;
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      color: black;
+      margin-right: 2rem;
+    }
+    .query {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: #8b8b8b;
+
+      .incorrect-query {
+        
+        &__error {
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  &__categories {
+    /* здесь отдельный встраиваемый блок */
+    margin-bottom: 4rem;
+  }
+
+  &__body {
+  }
+
+  &__aside {
+  }
+}
+
+.search-filters {
+  &__category {
+  }
+}
+
+.list {
+}
+.item {
+}
+.search-filters__price {
+}
+.search-filters__brands {
+}
+.search-results__list {
+}
+.results-list {
+}
+.results-list__header {
+}
+.sorts {
+}
+.sorts-by-characteristics {
+}
+.clarification {
+}
+.results-list__body {
+}
+.product-item {
+}
+.product-item__img {
+}
+.product-item__title {
+}
+.product-item__price {
+}
+.new-price {
+}
+.old-price {
+}

@@ -3,19 +3,21 @@
   box-sizing: border-box;
   user-select: none; /* потом отменить, поскольку клиент захочет выделять название товара зачем либо */
 }
+html {
+  font-size: 10px;
+}
 body {
   color: $text-color-base;
   font-family: "SFProDisplay-Regular", sans-serif;
-  font-size: 20px;
+  
   line-height: 24px;
   margin: 0;
-/*   background-color: black; */
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto; // выравниваю по центру
-  padding: 0 40px; 
+  padding: 0 4rem; 
 }
 
 li {

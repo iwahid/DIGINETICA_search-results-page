@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* Нормалайз, переменные для этого проекта и стартовый набор стилей
+
+Стартовые стили зависят от проекта и являются частью основы дизайна. На готовом сайте (при внесении правок или доработок) стили этой группы, как правило, уже реализованы в проекте. Компоненты не опираются на эти стили. Эта группа не является зависимостью */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -356,19 +359,21 @@ template {
   /* потом отменить, поскольку клиент захочет выделять название товара зачем либо */
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   color: #2f3035;
   font-family: "SFProDisplay-Regular", sans-serif;
-  font-size: 20px;
   line-height: 24px;
   margin: 0;
-  /*   background-color: black; */
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 4rem;
 }
 
 li {
@@ -485,4 +490,188 @@ a:hover {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* header страницы */
+.header {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  background-color: black;
+}
+
+.header__text {
+  padding-left: 2.4rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  line-height: 16px;
+  /* 
+    font-weight: 500; */
+  font-style: normal;
+}
+
+/* Тело страницы. Весь контент внутри неё */
+.search {
+  padding-top: 3.2rem;
+}
+
+.search__bar {
+  margin-bottom: 3rem;
+}
+
+/* Поисковый блок */
+/* FIXME: вернуться и отредактировать кнопки */
+.search-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 4rem;
+}
+
+.search-bar__form {
+  display: flex;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.search-bar__input::placeholder {
+  font-weight: normal;
+  font-size: 11.4;
+  line-height: 3rem;
+}
+
+.search-bar__search-button {
+  height: 100%;
+  /*   font-size: 11px; */
+  /*     line-height: 13px; */
+  text-align: center;
+  letter-spacing: 0.12em;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  color: white;
+  background-color: #f1bd45;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* Общий блок с результатами поиска */
+.search-results__top {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-results__query {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.search-results__query .title {
+  font-family: Arial;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  color: black;
+  margin-right: 2rem;
+}
+
+.search-results__query .query {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #8b8b8b;
+}
+
+.search-results__query .query .incorrect-query__error {
+  font-style: italic;
+}
+
+.search-results__categories {
+  /* здесь отдельный встраиваемый блок */
+  margin-bottom: 4rem;
+}
+
+/* Блок с перечнем категорий, в которых были найдены товары */
+.category {
+  overflow-x: hidden;
+  position: relative;
+  /* последнему элементу граница ни к чему */
+}
+
+.category__list {
+  display: flex;
+}
+
+.category__item {
+  display: flex;
+  min-width: 23rem;
+}
+
+.category__item img {
+  width: 6rem;
+  height: 6rem;
+  /* на случай, если изображения не будут загружены */
+  max-width: 6rem;
+  max-height: 6rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #c4c4c4;
+}
+
+.category__item:not(:last-child) {
+  margin-right: 2rem;
+  padding-right: 2rem;
+  border-right: 1px solid #b9b9b9;
+}
+
+.category__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+
+.category__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  /* NOTE: небольшая неточность в толщине шрифтов. По дефолту у Open sans нет нужного (примерно 500) значения объёма шрифта для отрисовки в браузере. Либо подключать расширенную версию шрифта (а такой нет даже на гугл фонтс), либо нужно подредактировать дизайн с учётом этого*/
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 19px;
+  color: #333;
+}
+
+.category__counter {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 16px;
+  color: #8b8b8b;
+}
+
+.category ::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 10rem;
+  content: "";
+  background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0));
+  opacity: 0.3;
 }

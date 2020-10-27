@@ -1,0 +1,70 @@
+.category {
+  overflow-x: hidden;
+  position: relative;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    min-width: 23rem;
+
+    img {
+      width: 6rem;
+      height: 6rem;
+      /* на случай, если изображения не будут загружены */
+      max-width: 6rem;
+      max-height: 6rem;
+      border: none;
+      border-radius: 3px;
+      background-color: #c4c4c4;
+    }
+  }
+
+  /* последнему элементу граница ни к чему */
+  &__item:not(:last-child) {
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid #b9b9b9;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+  }
+
+  &__title {
+    font-family: "Open Sans";
+    font-style: normal;
+    /* NOTE: небольшая неточность в толщине шрифтов. По дефолту у Open sans нет нужного (примерно 500) значения объёма шрифта для отрисовки в браузере. Либо подключать расширенную версию шрифта (а такой нет даже на гугл фонтс), либо нужно подредактировать дизайн с учётом этого*/
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 19px;
+    color: #333;
+  }
+
+  &__counter {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 16px;
+    color: #8b8b8b;
+  }
+
+  ::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 10rem;
+    content: "";
+    background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0)  );
+    opacity: 0.3;
+
+  }
+}
