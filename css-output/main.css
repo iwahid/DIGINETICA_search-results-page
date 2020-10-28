@@ -950,7 +950,8 @@ a:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Подключение UI элементов. Кнопка */
+/* Подключение UI элементов. */
+/*  Кнопка */
 .button {
   width: 100%;
   height: 4rem;
@@ -991,4 +992,55 @@ a:hover {
 
 .button__wrapper {
   width: 14.5rem;
+}
+
+/* Пагинация */
+.pagination {
+  width: 100%;
+  display: flex;
+  font-family: Arial;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #000000;
+}
+
+.pagination__item {
+  display: inline-block;
+  padding: 0 1px;
+  margin-left: 1.2rem;
+  line-height: 4rem;
+  opacity: 0.5;
+}
+
+.pagination__item:first-child {
+  margin-left: 0;
+}
+
+.pagination__item button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s box-shadow ease-in;
+}
+
+.pagination__item--active {
+  opacity: 1;
+}
+
+.pagination__item--arrow {
+  font-size: 3rem;
+  margin-left: 0.5rem;
+  line-height: 0;
+}
+
+.pagination__item--bullet {
+  margin-left: -0.3rem;
+}
+
+.pagination__item--bullet + li {
+  margin-left: -0.3rem;
+}
+
+.pagination__item :hover {
+  text-decoration: underline;
 }

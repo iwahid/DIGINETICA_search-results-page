@@ -30,5 +30,10 @@
 /* Сам список продуктов (Лист продуктов) */
 @import "./../components/blocks/products-list/products-list"; 
 
-/* Подключение UI элементов. Кнопка */
+
+/* Подключение UI элементов. */
+/*  Кнопка */
 @import "./../components/blocks/UI/button/button"; 
+
+/* Пагинация */
+@import "./../components/blocks/UI/pagination/pagination"; 

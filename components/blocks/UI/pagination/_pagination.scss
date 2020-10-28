@@ -1,0 +1,53 @@
+.pagination {
+  width: 100%;
+  display: flex;
+
+  font-family: Arial;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #000000;
+
+  &__item {
+    display: inline-block;
+    padding: 0 1px;
+    margin-left: 1.2rem;
+    line-height: 4rem;
+    opacity: 0.5;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: $shadow-animation;
+    }
+
+    &--disable {
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--arrow {
+      font-size: 3rem;
+      margin-left: 0.5rem;
+      line-height: 0;
+    }
+
+    &--bullet {
+      margin-left: -0.3rem;
+    }
+
+    &--bullet + li {
+      margin-left: -0.3rem;
+    }
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}
