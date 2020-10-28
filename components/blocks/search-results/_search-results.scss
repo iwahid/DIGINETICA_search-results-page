@@ -14,16 +14,16 @@
       font-family: Arial;
       font-size: 2.8rem;
       line-height: 3.2rem;
-      color: black;
+      color: $text-color-base;
       margin-right: 2rem;
     }
     .query {
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: normal;
       font-size: 1.4rem;
       line-height: 2rem;
-      color: #8b8b8b;
+      color: $text-color-light;
 
       .incorrect-query {
         
@@ -35,7 +35,6 @@
   }
 
   &__categories {
-    /* здесь отдельный встраиваемый блок */
     margin-bottom: 4rem;
   }
 
@@ -52,27 +51,4 @@
     width: 100%;
   }
 
-}
-
-
-
-.sorts {
-}
-.sorts-by-characteristics {
-}
-.clarification {
-}
-.results-list__body {
-}
-.product-item {
-}
-.product-item__img {
-}
-.product-item__title {
-}
-.product-item__price {
-}
-.new-price {
-}
-.old-price {
 }

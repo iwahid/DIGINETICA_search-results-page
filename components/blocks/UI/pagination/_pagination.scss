@@ -1,7 +1,6 @@
 .pagination {
   width: 100%;
   display: flex;
-
   font-family: Arial;
   font-size: 1.6rem;
   line-height: 1.8rem;
@@ -22,7 +21,6 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
-      transition: $shadow-animation;
     }
 
     &--disable {

@@ -13,7 +13,7 @@
       font-size: 1.4rem;
       line-height: 16px;
       font-weight: 600;
-      color: black;
+      color: $text-color-base;
       margin-bottom: 1rem;
     }
 
@@ -25,7 +25,8 @@
         color: #5375b7;
 
         span {
-          /* возможно, какие-то доп стили для счётчика, если понадобится */
+          color: $text-color-light;
+          opacity: 0.5;
         }
 
         button {
@@ -50,7 +51,7 @@
       font-size: 1.4rem;
       line-height: 16px;
       font-weight: 600;
-      color: black;
+      color: $text-color-base;
       margin-bottom: 1rem;
     }
   }
@@ -65,7 +66,7 @@
         font-size: 1.4rem;
         line-height: 16px;
         font-weight: 600;
-        color: black;
+        color: $text-color-base;
         margin-bottom: 1rem;
       }
 
@@ -82,7 +83,7 @@
 
         cursor: pointer;
 
-        color: #333333;
+        color: $text-color-light;
         opacity: 0.5;
       }
     }
