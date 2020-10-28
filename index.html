@@ -26,8 +26,12 @@
       <div class="search__bar">
         <!-- а внутри уже отдельный, самостоятельный дочерний компонент со своей структурой -->
         <div class="search-bar">
+          <!-- <input type="text" class="spec"> -->
           <form class="search-bar__form">
-            <input type="text" placeholder="Запрос пользователя" class="search-bar__input">
+            <div class="search-bar__input-wrapper">
+              <input type="text" placeholder="Запрос пользователя" class="search-bar__input">
+            </div>
+
             <!-- TODO: в стилях через падинг сделать отступ и вклеить иконку -->
             <div class="button__wrapper">
               <button class="button button--primary" type="submit">Найти</button>
@@ -120,7 +124,7 @@
                       <li class="categories__item"> <button type="button">Ещё 10 категорий...</button> </li>
                     </ul>
                   </div>
-                  
+
 
                 </div>
 
