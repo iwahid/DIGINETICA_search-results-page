@@ -8,76 +8,14 @@
     flex-direction: column;
     margin-bottom: 5rem;
 
-    .title {
-      font-family: Arial;
-      font-size: 1.4rem;
-      line-height: 16px;
-      font-weight: 600;
-      color: $text-color-base;
-      margin-bottom: 1rem;
-    }
-
-    .list {
-      .item {
-        font-family: Arial;
-        font-size: 1.4rem;
-        line-height: 3rem;
-        color: #5375b7;
-
-        span {
-          color: $text-color-light;
-          opacity: 0.5;
-        }
-
-        button {
-          background-color: transparent;
-          border: none;
-          padding: 0;
-          font-family: Arial;
-          font-size: 1.4rem;
-          line-height: 3rem;
-          color: #5375b7;
-          cursor: pointer;
-        }
-      }
-    }
+    
   }
 
   &__price {
     margin-bottom: 3rem;
-
   }
 
   &__brands {
-    .inner-top {
-      display: flex;
-      justify-content: space-between;
 
-      .title {
-        font-family: Arial;
-        font-size: 1.4rem;
-        line-height: 16px;
-        font-weight: 600;
-        color: $text-color-base;
-        margin-bottom: 1rem;
-      }
-
-      button {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-
-        font-family: Arial;
-        font-size: 10px;
-        line-height: 11px;
-        text-align: right;
-        text-decoration-line: underline;
-
-        cursor: pointer;
-
-        color: $text-color-light;
-        opacity: 0.5;
-      }
-    }
   }
 }

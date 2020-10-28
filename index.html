@@ -104,20 +104,23 @@
               Каждый из этих блоков можно было бы выделить в отдельный компонент. Но пока сделаю это только со слайдером цены -->
               <div class="search-filters">
                 <div class="search-filters__category">
-                  <p class="title">Все категории</p>
-                  <!-- FIXME: возможно, эти пункты из списка являются ссылками. Вернуться и убедится как в функционале, так и в семантике используемых элементов -->
-                  <ul class="list">
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <li class="item">Категория в которой нашли что-то <span>(ххх)</span></li>
-                    <!-- кнопке, в текущей ситуации нет смысла добавлять отдельный класс. Кнопка опциональна, и если она и будет, только одна в этому списке. Нет смысла дополнительно уникализировать её -->
-                    <li class="item"> <button type="button">Ещё 10 категорий...</button> </li>
-                  </ul>
+                  <div class="categories">
+                    <p class="categories__title">Все категории</p>
+                    <!-- FIXME: возможно, эти пункты из списка являются ссылками. Вернуться и убедится как в функционале, так и в семантике используемых элементов -->
+                    <ul class="categories__list">
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <li class="categories__item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                      <!-- кнопке, в текущей ситуации нет смысла добавлять отдельный класс. Кнопка опциональна, и если она и будет, только одна в этому списке. Нет смысла дополнительно уникализировать её -->
+                      <li class="categories__item"> <button type="button">Ещё 10 категорий...</button> </li>
+                    </ul>
+                  </div>
+                  
 
                 </div>
 
@@ -141,20 +144,21 @@
                       </div>
 
                     </div>
-                    
+
                   </div>
                 </div>
 
                 <div class="search-filters__brands">
-                  <div class="inner-top">
-                    <p class="title">Бренды</p>
-                    <button type="button">Очистить</button>
-                  </div>
 
-                  <div class="search-filters__checkbox-list">
-                    <ul class="checkbox-list">
+                  <div class="checkbox-group">
+                    <div class="inner-top">
+                      <p class="title">Бренды</p>
+                      <button type="button">Очистить</button>
+                    </div>
 
+                    <ul class="checkbox-group__list">
                       <li class="item">
+                        <!-- NOTE: подобные короткие и "общие" названия классов для элементов не страшны (в плане возможного перекрывающего конфликта правил), посколько стили пишутся в препроцессоре через  вложенности -->
                         <label class="checkbox">
                           <input class="checkbox__input" type="checkbox">
                           <span class="checkbox__box">Бренд</span>
@@ -175,11 +179,10 @@
                           <span class="checkbox__label">(x ххх)</span>
                         </label>
                       </li>
-
                     </ul>
+
+
                   </div>
-
-
 
                 </div>
               </div>

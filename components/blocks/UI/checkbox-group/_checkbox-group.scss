@@ -1,25 +1,55 @@
-.checkbox-list {
-  li {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.4rem;
-    line-height: 3rem;
+.checkbox-group {
+  
+  .inner-top {
+    display: flex;
+    justify-content: space-between;
 
-    color: $text-color-base;
+    .title {
+      font-family: Arial;
+      font-size: 1.4rem;
+      line-height: 16px;
+      font-weight: 600;
+      color: $text-color-base;
+      margin-bottom: 1rem;
+    }
 
-    .checkbox {
-      input {
-        opacity: 0.7;
-      }
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-family: Arial;
+      font-size: 10px;
+      line-height: 11px;
+      text-align: right;
+      text-decoration-line: underline;
+      cursor: pointer;
+      color: $text-color-light;
+      opacity: 0.5;
+    }
+  }
 
-      &__box {
-        margin-left: 0.5rem;
-        font-weight: 400;
-      }
+  &__list {
+    li {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 3rem;
+      color: $text-color-base;
 
-      &__label {
-        color: $text-color-light;
+      .checkbox {
+        input {
+          opacity: 0.7;
+        }
+
+        &__box {
+          margin-left: 0.5rem;
+          font-weight: 400;
+        }
+
+        &__label {
+          color: $text-color-light;
+        }
       }
     }
   }

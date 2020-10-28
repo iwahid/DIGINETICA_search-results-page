@@ -1,25 +1,33 @@
-<ul class="checkbox-list">
+<div class="checkbox-group">
+  <div class="inner-top">
+    <p class="title">Бренды</p>
+    <button type="button">Очистить</button>
+  </div>
 
-  <li class="item">
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox">
-      <span class="checkbox__box">Бренд</span>
-      <span class="checkbox__label">(ххх)</span>
-    </label>
-  </li>
-  <li class="item">
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox">
-      <span class="checkbox__box">Бренд</span>
-      <span class="checkbox__label">(х)</span>
-    </label>
-  </li>
-  <li class="item">
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox">
-      <span class="checkbox__box">Бренд</span>
-      <span class="checkbox__label">(x ххх)</span>
-    </label>
-  </li>
+  <ul class="checkbox-group__list">
+    <li class="item">
+      <!-- NOTE: подобные короткие и "общие" названия классов для элементов не страшны (в плане возможного перекрывающего конфликта правил), посколько стили пишутся в препроцессоре через  вложенности -->
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox">
+        <span class="checkbox__box">Бренд</span>
+        <span class="checkbox__label">(ххх)</span>
+      </label>
+    </li>
+    <li class="item">
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox">
+        <span class="checkbox__box">Бренд</span>
+        <span class="checkbox__label">(х)</span>
+      </label>
+    </li>
+    <li class="item">
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox">
+        <span class="checkbox__box">Бренд</span>
+        <span class="checkbox__label">(x ххх)</span>
+      </label>
+    </li>
+  </ul>
 
-</ul>
+
+</div>
