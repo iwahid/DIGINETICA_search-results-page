@@ -353,10 +353,9 @@ template {
 /* для внутренних элементво сайта (кнопок) */
 /* анимация для svg элементов, являющихся кнопками или другими эл. управления */
 /* общий стиль теней для всех объектов на сайте */
+/* общий стиль теней для всех объектов на сайте */
 * {
   box-sizing: border-box;
-  user-select: none;
-  /* потом отменить, поскольку клиент захочет выделять название товара зачем либо */
 }
 
 html {
@@ -605,6 +604,19 @@ a:hover {
   margin-bottom: 4rem;
 }
 
+.search-results__body {
+  display: flex;
+}
+
+.search-results__aside {
+  min-width: 30rem;
+  margin-right: 3rem;
+}
+
+.search-results__list {
+  width: 100%;
+}
+
 /* Блок с перечнем категорий, в которых были найдены товары */
 .category {
   overflow-x: hidden;
@@ -674,4 +686,309 @@ a:hover {
   content: "";
   background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0));
   opacity: 0.3;
+}
+
+/* Aside блок с фильтрами по найденым результатам */
+.search-filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-filters__category {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.search-filters__category .title {
+  font-family: Arial;
+  font-size: 1.4rem;
+  line-height: 16px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.search-filters__category .list .item {
+  font-family: Arial;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #5375b7;
+}
+
+.search-filters__category .list .item span {
+  /* возможно, какие-то доп стили для счётчика, если понадобится */
+}
+
+.search-filters__category .list .item button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: Arial;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #5375b7;
+  cursor: pointer;
+}
+
+.search-filters__price {
+  margin-bottom: 3rem;
+}
+
+.search-filters__price .title {
+  font-family: Arial;
+  font-size: 1.4rem;
+  line-height: 16px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.search-filters__brands .inner-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-filters__brands .inner-top .title {
+  font-family: Arial;
+  font-size: 1.4rem;
+  line-height: 16px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.search-filters__brands .inner-top button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: Arial;
+  font-size: 10px;
+  line-height: 11px;
+  text-align: right;
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: #333333;
+  opacity: 0.5;
+}
+
+.search-filters__brands .list li {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #000000;
+  opacity: 0.7;
+}
+
+/* Секция со списком найденных товаров */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.results-list__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-list__header .sorts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 2rem;
+  /* изменить после реализации дропдауна */
+}
+
+.results-list__header .sorts__wrapper {
+  display: flex;
+}
+
+.results-list__header .sorts__by-characteristics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+}
+
+.results-list__header .sorts li {
+  margin-right: 1.5rem;
+}
+
+.results-list__header .sorts li button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  cursor: pointer;
+  color: #5375B7;
+}
+
+.results-list__header .sorts li .button--active {
+  text-decoration-line: underline;
+  text-decoration-color: #F1BD45;
+  color: #333333;
+}
+
+.results-list__header .clarification {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.results-list__header .clarification li {
+  padding: 0.7rem 1.5rem;
+  /* FIXME: вернуть робото font-family: "Roboto"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+  background-color: #FFF3D8;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.results-list__header .clarification li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/* Сам список продуктов (Лист продуктов) */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -44px;
+  width: calc(100% + 44px);
+}
+
+.products-item {
+  flex-basis: 260px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-bottom: 4rem;
+  margin-left: 44px;
+  border-radius: 3px;
+  transition: 0.2s box-shadow ease-in;
+}
+
+.products-item__img {
+  background-color: #c4c4c4;
+  width: 100%;
+  height: 260px;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.products-item__title {
+  margin-bottom: 2rem;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  height: 3rem;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+}
+
+.products-item__price {
+  margin-bottom: 1.5rem;
+}
+
+.products-item__price .new-price {
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #000000;
+  margin-right: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.products-item__price .new-price::after {
+  position: absolute;
+  content: "$";
+  top: 3px;
+  right: -10px;
+}
+
+.products-item__price .old-price {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-decoration-line: line-through;
+  color: #a9a9a9;
+}
+
+.products-item__price .old-price::after {
+  position: absolute;
+  content: "$";
+  top: 3px;
+  right: -10px;
+}
+
+.products-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Подключение UI элементов. Кнопка */
+.button {
+  width: 100%;
+  height: 4rem;
+  /* спорное решение о выставлении фиксированного размера, но по дизайну нет примеров где кнопка имела бы вид отличный от дефолтного */
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+  color: #000000;
+  transition: 0.2s box-shadow ease-in;
+  /* при компонентном подходе, стили высоты и ширины как для самой кнопки, так и для её враппера можно установить динамически, через js. Но в данном случае, поскольку на странице необходим только один враппер, можно установить для него жёсткие значения */
+}
+
+.button--primary {
+  background-color: #f1bd45;
+  border-color: #f1bd45;
+  transition: 0.2s background-color ease-in;
+}
+
+.button--primary:hover {
+  background-color: #ffb300;
+  border-color: #ffb300;
+}
+
+.button--regular {
+  background-color: white;
+  border-color: #dedede;
+  transition: 0.2s background-color ease-in;
+}
+
+.button--regular:hover {
+  background-color: #eeeeee;
+}
+
+.button__wrapper {
+  width: 14.5rem;
 }

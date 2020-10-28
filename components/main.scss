@@ -19,3 +19,16 @@
 
 /* Блок с перечнем категорий, в которых были найдены товары */
 @import "./../components/sections/categories-section/categories-section"; 
+
+/* Aside блок с фильтрами по найденым результатам */
+@import "./../components/blocks/search-filters/search-filters"; 
+
+/* Секция со списком найденных товаров */
+@import "./../components/blocks/results-list/results-list"; 
+
+
+/* Сам список продуктов (Лист продуктов) */
+@import "./../components/blocks/products-list/products-list"; 
+
+/* Подключение UI элементов. Кнопка */
+@import "./../components/blocks/UI/button/button"; 

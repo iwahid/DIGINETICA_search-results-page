@@ -40,31 +40,22 @@
   }
 
   &__body {
+    display: flex;
   }
 
   &__aside {
+    min-width: 30rem;
+    margin-right: 3rem;
   }
+
+  &__list {
+    width: 100%;
+  }
+
 }
 
-.search-filters {
-  &__category {
-  }
-}
 
-.list {
-}
-.item {
-}
-.search-filters__price {
-}
-.search-filters__brands {
-}
-.search-results__list {
-}
-.results-list {
-}
-.results-list__header {
-}
+
 .sorts {
 }
 .sorts-by-characteristics {

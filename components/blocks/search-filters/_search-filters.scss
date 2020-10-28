@@ -1,0 +1,105 @@
+.search-filters {
+  display: flex;
+  flex-direction: column;
+  
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+    .title {
+      font-family: Arial;
+      font-size: 1.4rem;
+      line-height: 16px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 1rem;
+    }
+
+    .list {
+      .item {
+        font-family: Arial;
+        font-size: 1.4rem;
+        line-height: 3rem;
+        color: #5375b7;
+
+        span {
+          /* возможно, какие-то доп стили для счётчика, если понадобится */
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          font-family: Arial;
+          font-size: 1.4rem;
+          line-height: 3rem;
+          color: #5375b7;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 3rem;
+
+    .title {
+      font-family: Arial;
+      font-size: 1.4rem;
+      line-height: 16px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__brands {
+    .inner-top {
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        font-family: Arial;
+        font-size: 1.4rem;
+        line-height: 16px;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        font-family: Arial;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: right;
+        text-decoration-line: underline;
+
+        cursor: pointer;
+
+        color: #333333;
+        opacity: 0.5;
+      }
+    }
+
+    .list {
+
+      li {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 3rem;
+
+        color: #000000;
+
+        opacity: 0.7;
+      }
+    }
+  }
+}

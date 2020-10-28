@@ -1,0 +1,42 @@
+.button {
+  width: 100%;
+  height: 4rem; /* спорное решение о выставлении фиксированного размера, но по дизайну нет примеров где кнопка имела бы вид отличный от дефолтного */
+  border-radius: 3px;
+  border: 1px solid transparent;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+
+  color: #000000;
+  transition: $shadow-animation;
+
+  &--primary {
+    background-color: #f1bd45;
+    border-color: #f1bd45;
+    transition: $bc-animation;
+
+    &:hover {
+      background-color: #ffb300;
+      border-color: #ffb300;
+    }
+  }
+
+  &--regular {
+    background-color: white;
+    border-color: #dedede;
+    transition: $bc-animation;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
+  }
+
+  /* при компонентном подходе, стили высоты и ширины как для самой кнопки, так и для её враппера можно установить динамически, через js. Но в данном случае, поскольку на странице необходим только один враппер, можно установить для него жёсткие значения */
+  &__wrapper {
+    width: 14.5rem;
+  }
+}

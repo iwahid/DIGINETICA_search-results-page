@@ -1,0 +1,89 @@
+.results-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    .sorts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px; 
+      line-height: 19px;
+      color: #000000;
+      margin-bottom: 2rem; /* изменить после реализации дропдауна */
+
+      &__wrapper{
+        display: flex;
+      }
+
+      &__by-characteristics {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+      }
+
+      li {
+        margin-right: 1.5rem;
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px; 
+          line-height: 19px;
+          color: #000000;
+  
+          cursor: pointer;
+          color: #5375B7;
+
+        }
+
+        .button--active {
+          text-decoration-line: underline;
+          text-decoration-color: #F1BD45;
+          color: #333333;
+        }
+      }
+    }
+
+    .clarification {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0.7rem 1.5rem;
+       /* FIXME: вернуть робото font-family: "Roboto"; */
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;        
+        color: #000000;
+        background-color: #FFF3D8;
+        border-radius: 3px;  
+        margin-bottom: 1rem;
+            
+      }
+
+      li:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+    }
+  }
+
+  &__body {
+    
+  }
+}
