@@ -684,11 +684,12 @@ a:hover {
 .category__item {
   display: flex;
   min-width: 23rem;
-}
-
-.category__item img {
   width: 6rem;
   height: 6rem;
+}
+
+.category__img img {
+  display: block;
   /* на случай, если изображения не будут загружены */
   max-width: 6rem;
   max-height: 6rem;

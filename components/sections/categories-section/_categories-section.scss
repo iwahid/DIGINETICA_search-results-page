@@ -9,10 +9,13 @@
   &__item {
     display: flex;
     min-width: 23rem;
+    width: 6rem;
+    height: 6rem;
+  }
 
+  &__img {
     img {
-      width: 6rem;
-      height: 6rem;
+      display: block;
       /* на случай, если изображения не будут загружены */
       max-width: 6rem;
       max-height: 6rem;
