@@ -1,0 +1,26 @@
+.checkbox-list {
+  li {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 3rem;
+
+    color: $text-color-base;
+
+    .checkbox {
+      input {
+        opacity: 0.7;
+      }
+
+      &__box {
+        margin-left: 0.5rem;
+        font-weight: 400;
+      }
+
+      &__label {
+        color: $text-color-light;
+      }
+    }
+  }
+}
