@@ -100,7 +100,8 @@
 
           <div class="search-results__body">
             <aside class="search-results__aside">
-              <!-- секция с параметрами -->
+              <!-- секция с параметрами.
+              Каждый из этих блоков можно было бы выделить в отдельный компонент. Но пока сделаю это только со слайдером цены -->
               <div class="search-filters">
                 <div class="search-filters__category">
                   <p class="title">Все категории</p>
@@ -121,10 +122,27 @@
                 </div>
 
                 <div class="search-filters__price">
-                  <p class="title">Цена, валюта</p>
-                  Input range
+                  <div class="double-range">
+                    <p class="title">Цена, валюта</p>
+                    <div class="double-range__input-wrapper">
+                      <span>От</span>
+                      <input id='id66i1' class='range_inpt1' type='number' min='1000' max='1000000'>
+                      <span>до</span>
+                      <input id='id66i2' class='range_inpt2' type='number' min='1000' max='1000000'>
+                      <span>р</span>
+                    </div>
 
-                  <!-- FIXME: range -->
+                    <div id='id66' class="range">
+
+                      <div class="range-inner">
+                        <div id='id66b' class='range__between'></div>
+                        <button id='id661' class="range__button_1"></button>
+                        <button id='id662' class="range__button_2"></button>
+                      </div>
+
+                    </div>
+                    
+                  </div>
                 </div>
 
                 <div class="search-filters__brands">
@@ -311,6 +329,8 @@
     </div>
     </div>
   </section>
+
+  <script src="components/blocks/UI/double-range/double-range.js"></script>
 </body>
 
 </html>
