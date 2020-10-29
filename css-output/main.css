@@ -662,7 +662,7 @@ a:hover {
 }
 
 .search-results__aside {
-  min-width: 30rem;
+  min-width: 29rem;
   margin-right: 3rem;
 }
 
@@ -684,8 +684,13 @@ a:hover {
 .category__item {
   display: flex;
   min-width: 23rem;
+}
+
+.category__img {
   width: 6rem;
   height: 6rem;
+  border-radius: 3px;
+  background-color: #c4c4c4;
 }
 
 .category__img img {

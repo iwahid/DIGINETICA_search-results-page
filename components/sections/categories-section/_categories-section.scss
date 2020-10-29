@@ -9,11 +9,15 @@
   &__item {
     display: flex;
     min-width: 23rem;
-    width: 6rem;
-    height: 6rem;
+    
   }
 
   &__img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3px;    
+    background-color: #c4c4c4;
+
     img {
       display: block;
       /* на случай, если изображения не будут загружены */
