@@ -46,6 +46,11 @@
 
   &__body {
     display: flex;
+
+    /* перестройка макета */
+    @media (max-width: 980px) {
+      flex-direction: column;
+    }
   }
 
   &__aside {

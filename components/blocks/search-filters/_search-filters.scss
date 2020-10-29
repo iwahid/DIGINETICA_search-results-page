@@ -1,20 +1,33 @@
 .search-filters {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 980px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   
 
   &__category {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
+
+    @media (max-width: 980px) {
+      margin-right: 2rem;
+    }
     
   }
 
   &__price {
     margin-bottom: 3rem;
+    @media (max-width: 980px) {
+      margin-right: 2rem;
+    }
   }
 
   &__brands {
-
+    margin-bottom: 5rem;
   }
 }
