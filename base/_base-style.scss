@@ -17,6 +17,14 @@ body {
   max-width: 1280px;
   margin: 0 auto; // выравниваю по центру
   padding: 0 4rem; 
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 1rem;
+  }
 }
 
 li {
