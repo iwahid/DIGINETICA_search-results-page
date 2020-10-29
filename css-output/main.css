@@ -792,10 +792,23 @@ a:hover {
   display: flex;
 }
 
+@media (max-width: 1060px) {
+  .results-list__header .sorts__wrapper {
+    flex-direction: column;
+  }
+}
+
 .results-list__header .sorts__by-characteristics {
   display: flex;
   flex-wrap: wrap;
   margin-left: 1rem;
+}
+
+@media (max-width: 1060px) {
+  .results-list__header .sorts__by-characteristics {
+    margin-left: 0rem;
+    margin: 1rem 0;
+  }
 }
 
 .results-list__header .sorts li {
