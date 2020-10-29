@@ -5,6 +5,10 @@
 html {
   font-size: 10px;
 }
+
+ul {
+  margin: 0; padding: 0;
+}
 body {
   color: $text-color-base;
   font-family: "SFProDisplay-Regular", sans-serif;

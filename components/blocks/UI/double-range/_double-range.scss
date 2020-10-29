@@ -23,6 +23,7 @@
     .range_inpt1,
     .range_inpt2 {
       border: 1px solid #DEDEDE;
+      max-width: 10rem;
       font-size: 13px;
       padding: 12px 0 12px 12px;
       background: white;
@@ -66,8 +67,9 @@
     .range__button_2 {
       position: absolute;
       top: 50%;    
-      width: 14px;
-      height: 16px;    
+      width: 16px;
+      height: 16px;  
+      padding: 0;  
       cursor: move;
       transform: translateY(-50%);    
       border: 2px solid black;
