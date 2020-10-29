@@ -14,11 +14,10 @@
 
 <body>
   <header class="header">
-    <!-- здесь шапка сайта -->
+    <!-- здесь шапка сайта. Ориентируясь на макет, можно понять что контент шапки находится не в пределах контейнера, а расположен по всей ширине экрана -->
     <p class="header__text">Шапка сайта</p>
   </header>
 
-  <!-- TODO: сделать все кнопки готовыми элементами для всей страницы -->
   <section class="search">
     <div class="container">
       <!-- NOTE: ниже пример часто встречающейся структуры в проекте, когда в разметке страницы в пределах одного Блока объявлены элементы этого блока, используемые как контейнеры. Т.е. они не представляют собой целостный элемент, а лишь контейнер для другого Блока. Такая структура помогает разграничить зоны ответственности между компонентами, когда контейнер отвечает за позиционирование и отступы, а его дочерний компонент Блок представляет собой уже целостный компонент. -->
@@ -31,7 +30,6 @@
               <input type="text" placeholder="Запрос пользователя" class="search-bar__input">
             </div>
 
-            <!-- TODO: в стилях через падинг сделать отступ и вклеить иконку -->
             <div class="button__wrapper">
               <button class="button button--primary" type="submit">Найти</button>
             </div>
@@ -49,16 +47,15 @@
           <div class="search-results__top">
             <div class="search-results__query">
               <p class="title">Результаты по запросу</p>
-              <p class="query">Показаны результаты для <span class="correct-query">“Запрос пользозвателя”</span>. Вы
-                искали <span class="incorrect-query">“<span class="incorrect-query__error">Зопрос</span>
+              <p class="query">Показаны результаты для <span class="correct-query">“Запрос пользозвателя”</span>. Вы искали <span class="incorrect-query">“<span class="incorrect-query__error">Зопрос</span>
                   пользователя”</span>.</p>
             </div>
           </div>
 
           <!-- здесь, скорее всего, должен быть слайдер -->
-          <!-- нет уверенности в том, что здесь нужен section, а не div -->
+          <!-- NOTE: с точки зрения семантики - нет уверенности в том, что здесь нужен section, а не div -->
           <section class="search-results__categories">
-            <!-- NOTE: перехожу от БЭМ-а к простой нотации, потому что стили будут описаны в препроцессоре через вложенность. Это позволит избежать большого количества элементов с длинными именами классов -->
+            <!-- NOTE: здесь, и далее перехожу от БЭМ-а к простой нотации, потому что стили будут описаны в препроцессоре через вложенность. Это позволит избежать большого количества элементов с длинными именами классов -->
             <div class="category">
               <ul class="category__list">
                 <li class="category__item">
@@ -135,7 +132,6 @@
                     </ul>
                   </div>
 
-
                 </div>
 
                 <div class="search-filters__price">
@@ -204,8 +200,8 @@
 
             <!-- основная секция с товарами -->
             <section class="search-results__list">
-              <!-- лист с результатами поиска -->
 
+              <!-- лист с результатами поиска -->
               <div class="results-list">
                 <div class="results-list__header">
                   <div class="sorts">
@@ -337,16 +333,7 @@
                       type="button">&rsaquo;</button></li>
                 </ul>
 
-
               </div>
-
-              <!--  <svg>
-                        <use href="img/products-cards/product-card-icons-sprite.svg#product-card-icons-sprite__cart">
-                        </use>
-                      </svg>
-                     -->
-
-
 
             </section>
           </div>
@@ -356,6 +343,7 @@
     </div>
   </section>
 
+  <!-- скрипт для работы двойного слайдера цены -->
   <script src="components/blocks/UI/double-range/double-range.js"></script>
 </body>
 

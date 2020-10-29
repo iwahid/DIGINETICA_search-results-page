@@ -3,14 +3,12 @@
   height: 4rem; /* спорное решение о выставлении фиксированного размера, но по дизайну нет примеров где кнопка имела бы вид отличный от дефолтного */
   border-radius: 3px;
   border: 1px solid transparent;
-
   font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 1.6rem;
   cursor: pointer;
-
   color: #000000;
   transition: $shadow-animation;
 

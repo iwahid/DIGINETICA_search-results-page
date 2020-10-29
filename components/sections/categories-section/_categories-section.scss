@@ -9,7 +9,6 @@
   &__item {
     display: flex;
     min-width: 23rem;
-    
   }
 
   &__img {
@@ -72,6 +71,5 @@
     content: "";
     background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0)  );
     opacity: 0.3;
-
   }
 }
