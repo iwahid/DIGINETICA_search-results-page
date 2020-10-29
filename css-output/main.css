@@ -843,7 +843,6 @@ a:hover {
   line-height: 19px;
   color: #000000;
   margin-bottom: 2rem;
-  /* изменить после реализации дропдауна */
 }
 
 .results-list__header .sorts__wrapper {
@@ -901,7 +900,6 @@ a:hover {
 
 .results-list__header .clarification li {
   padding: 0.7rem 1.5rem;
-  /* FIXME: вернуть робото font-family: "Roboto"; */
   font-style: normal;
   font-weight: 600;
   font-size: 14px;

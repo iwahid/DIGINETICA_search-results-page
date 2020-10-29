@@ -17,7 +17,7 @@
       font-size: 14px; 
       line-height: 19px;
       color: #000000;
-      margin-bottom: 2rem; /* изменить после реализации дропдауна */
+      margin-bottom: 2rem; 
 
       &__wrapper{
         display: flex;
@@ -44,17 +44,14 @@
           background-color: transparent;
           border: none;
           padding: 0;
-
           font-family: "Open Sans";
           font-style: normal;
           font-weight: normal;
           font-size: 14px; 
           line-height: 19px;
           color: #000000;
-  
           cursor: pointer;
           color: #5375B7;
-
         }
 
         .button--active {
@@ -72,7 +69,6 @@
 
       li {
         padding: 0.7rem 1.5rem;
-       /* FIXME: вернуть робото font-family: "Roboto"; */
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -81,14 +77,12 @@
         color: #000000;
         background-color: #FFF3D8;
         border-radius: 3px;  
-        margin-bottom: 1rem;
-            
+        margin-bottom: 1rem;            
       }
 
       li:not(:last-child) {
         margin-right: 1rem;
       }
-
     }
   }
 
